@@ -1,0 +1,13 @@
+<p>employee-list works!</p>
+
+<label for="managerId">Enter Manager ID:</label>
+<input type="number" id="managerId" [(ngModel)] = "managerId"/>
+
+<button (click)="getEmployees()">Get Employees</button>
+
+<hr>
+
+<label for="employeeDropdown">Reporting Employees:</label>
+<select id = "employeeDropdown" [(ngModel)]="selectedEmployee">
+  <option *ngFor="let employee of employees" [value]="employee.id">{{ employee.name}}</option>
+</select>
